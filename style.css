@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"); /* These are the fonts which we have imported */
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+body {
+  background-color: antiquewhite;
+  /* Colour of the body  */
+}
+
+* {
+  /* For full body */
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  font-family: "Ubuntu", sans-serif;
+  /* First come first serve if ubuntu is not available then sans-serif is taken */
+}
+
+nav ul {
+  display: flex; /* Items get arranged in horizontal manner */
+  align-items: center;
+  list-style-type: none; /* By default list is made with circles and to remove that we set list style to none. */
+  height: 65px;
+  background-color: black; /* Color of the navigation bar will be black */
+  color: white; /* The text in the navigation bar will be written in white navigation bar is the black bar in the top */
+}
+
+nav ul li {
+  padding: 0 12px; /* To put a space between every element in the navigation bar (Every element of the navigation bar is the element of the list) */
+}
+.brand img {
+  /* Setting the dimensions of the music app image */
+  width: 44px;
+  padding: 0 8px; /* To put a space between image and Echoverse */
+}
+
+.brand {
+  /* This is used to make the Echoverse name in the centre */
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+.container {
+  min-height: 72vh; /* To push the bottom bar down, so we have increased the height of the container */
+  background-color: black;
+  color: white;
+  font-family: "Varela Round", sans-serif;
+  display: flex;
+  margin: 23px auto;
+  /* TO give a margin of 23px from top and bottom and auto for left and right. Auto is used to put the item at center */
+
+  width: 70%;
+  border-radius: 12px; /* To make the box a little curve at the edges */
+  padding: 34px; /* To increase the distance btw the content and the outer boundary. So that woh content outer boundary se juda hua na lage*/
+  background-image: url("bg.jpg");
+}
+
+.bottom {
+  position: sticky;
+  /* position sticky makes the bottom bar be visible in relative position (at bottom) until the user scrolls down. 
+    then the bar sticks to the bottom of the page. */
+  bottom: 0;
+  height: 130px;
+  background-color: black;
+  color: white; /* To change the color of the icons to white */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* To make the next pause and previous icon below the range input */
+}
+
+.icons {
+  margin-top: 14px; /* To allot a space btw the icons and the range input */
+}
+.icons i {
+  cursor: pointer;
+  /* When we move cursor on the icons then the cursor changes to pointer i.e. a palm */
+}
+
+#myProgressBar {
+  width: 80vw;
+  cursor: pointer; /* When we move cursor on the icons then the cursor changes to pointer i.e. a palm */
+}
+
+.songItemContainer {
+  margin-top: 74px;
+}
+
+.songItem {
+  height: 50px;
+  display: flex;
+  background-color: white;
+  color: black;
+  margin: 12px 0;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 34px;
+}
+
+.songItem img {
+  width: 43px;
+  margin: 0 23px;
+  border-radius: 34px;
+}
+
+.timestamp {
+  /* 5:34 ke left and right meh 23px space */
+  margin: 0 23px;
+}
+
+.timestamp i {
+  cursor: pointer;
+}
+
+.songInfo {
+  /* To make the gif and the current playing song towards the left*/
+  position: absolute;
+  left: 10vw;
+  font-family: "Varela Round", sans-serif;
+}
+
+.songInfo img {
+  /* opacity 0 means not visible and opacity 1 means full visible so we make opacity=1 of the gif when the song is playing by javascript */
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+@media only screen and (max-width: 1100px) {
+  body {
+    background-color: red;
+  }
+}
